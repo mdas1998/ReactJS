@@ -5,7 +5,9 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [name, setName] = useState("Micheal")
+  // const [name, setName] = useState("Micheal")
+
+  const [form, setForm] = useState({})
 
   const handleClick = () => {
     alert("You clicked me!")
@@ -16,7 +18,9 @@ function App() {
   }
   
   const handleChange = (e) => {
-    setName(e.target.value)
+    // setName(e.target.value)
+    setForm({...form, [e.target.name]:e.target.value})
+    console.log(form)
   }
 
   return (
@@ -24,10 +28,11 @@ function App() {
      <div className="button">
       <button onClick={handleClick}>Click Me</button>
      </div>
-     <div className="red" onMouseOver={handleMouseOver}>
+     {/* <div className="red" onMouseOver={handleMouseOver}>
       I am a red
-     </div>
-     <input type="text" name="text" id="txt1" value={name} onChange={handleChange} />
+     </div> */}
+     <input type="text" name="email" id="txt1" value={form.email? form.email: ""} onChange={handleChange} />
+     <input type="phone" name="phone" id="txt1" value={form.phone? form.phone: ""} onChange={handleChange} />
     </>
   )
 }
