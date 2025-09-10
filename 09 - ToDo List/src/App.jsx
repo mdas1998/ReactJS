@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { IoAddCircleSharp } from "react-icons/io5"; // ✅ correct for IoAddCircleSharp
 import { IoIosSave } from "react-icons/io"; // ✅ correct for IoIosSave
-import { MdCancel } from "react-icons/md";
+import { MdCancel } from "react-icons/md"; // Icons for cancel
 
 
 function App() {
